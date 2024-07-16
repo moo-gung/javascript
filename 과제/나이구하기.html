@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>나이 구하기</h2>
+    <hr>
+
+    <script>
+        
+        let born = prompt("태어난 년도를 입력하세요");
+        let age = 0;
+        let date = new Date();
+        
+        age = date.getFullYear() - born;
+        document.write("당신의 나이는 " + age + "살 입니다.")
+
+        console.log(date.getFullYear())
+
+        function getAge (태어난년도){
+            let date = new Date();
+            let age;        
+            age = date.getFullYear() - born;
+            return age;
+        }
+
+        let result = getAge();
+        alert(result);
+    </script>
+</body>
+</html>

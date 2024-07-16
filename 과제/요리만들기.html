@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
+  </head>
+  <body>
+
     <script>
-        function cook(참치캔, 양파, 마요네즈, 계란, 밥){
-            alert("참치캔 " + 참치캔 + "의 기름를 제거합니다.")
-            alert("양파 " + 양파 + "를 잘게 다져줍니다.")
-            alert("양파 위에 마요네즈 " + 마요네즈 + "를 부어주고 섞어줍니다.")
-            alert("계란 " + 계란 + "을 기름을 두른 후라이팬에 올려주고 저어줍니다.")
-            alert("밥 " + 밥 + " 위에 준비한 마요네즈와 계란을 올려줍니다.")
-            alert("기호에 맞게 김가루나 깨를 뿌려준 후 비벼주면 됩니다.")
-            return "https://recipe1.ezmember.co.kr/cache/recipe/2017/11/09/577f07d2a67736a0df97f8f5c95d26f01.jpg"
-        }
-         let 참치캔 = "1캔";
-         let 양파 = "1/4개";
-         let 마요네즈 = "1숟가락";
-         let 계란 = "1개";
-         let 밥 = "1공기";
+        function cook() {
+        alert("참치캔 " + 참치캔 + "의 기름를 제거합니다.");
+        alert("양파 " + 양파 + "를 잘게 다져줍니다.");
+        alert("양파 위에 마요네즈 " + 마요네즈 + "를 부어주고 섞어줍니다.");
+        alert(
+          "계란 " + 계란 + "을 기름을 두른 후라이팬에 올려주고 저어줍니다."
+        );
+        alert("밥 " + 밥 + " 위에 준비한 마요네즈와 계란을 올려줍니다.");
+        alert("기호에 맞게 김가루나 깨를 뿌려준 후 비벼주면 됩니다.");
+        return "https://recipe1.ezmember.co.kr/cache/recipe/2017/11/09/577f07d2a67736a0df97f8f5c95d26f01.jpg";
+      }
+      let 참치캔 = "1캔";
+      let 양파 = "1/4개";
+      let 마요네즈 = "1숟가락";
+      let 계란 = "1개";
+      let 밥 = "1공기";
 
-         let result = cook(참치캔, 양파, 마요네즈, 계란, 밥)
+      let result = cook(참치캔, 양파, 마요네즈, 계란, 밥);
 
-         document.write("<img src = " + result + " width=400px; height=300px>")
+      document.write("<img src = " + result + " width=400px; height=300px>");
     </script>
-</body>
+  </body>
 </html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #movie-list{
+            display: none;
+        }
+        #movie-list.active{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>영화 정보</h1>
+    <hr>
+    <div id="movie-info"></div>
+    <button onclick="showMovieList()">목록 보기</button>
+    <div id="movie-list"></div>
+    <script>
+        let movies = [
+            {
+                name: "탈주",
+                release: "20240703",
+                audience: "139만",
+                ranking: 1,
+                rating: 8.10,
+                poster: "https://search.pstatic.net/common?type=f&size=206x290&quality=100&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20240603_250%2F1717391161610hLGGJ_JPEG%2Fmovie_image.jpg"
+            },
+            {
+                name: "탈출: 프로젝트 사일런스",
+                release: "20240712",
+                audience: "39만",
+                ranking: 2,
+                rating: 7.05,
+                poster: "https://search.pstatic.net/common?type=f&size=206x290&quality=100&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20240703_290%2F17199947355505JCbb_JPEG%2Fmovie_image.jpg"
+            },
+            {
+                name: "인사이드 아웃 2",
+                release: "20240612",
+                audience: "768만",
+                ranking: 3,
+                rating: 9.25,
+                poster: "https://search.pstatic.net/common?type=f&size=206x290&quality=100&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20240612_151%2F1718180074487NH0V5_JPEG%2Fmovie_image.jpg"
+            },
+            {
+                name: "핸섬가이즈",
+                release: "20240626",
+                audience: "134만",
+                ranking: 4,
+                rating: 8.69,
+                poster: "https://search.pstatic.net/common?type=f&size=206x290&quality=100&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20240628_57%2F17195663390837ClOR_JPEG%2Fmovie_image.jpg"
+            },
+            {
+                name: "하이재킹",
+                release: "20240621",
+                audience: "165만",
+                ranking: 5,
+                rating: 8.96,
+                poster: "https://search.pstatic.net/common?type=f&size=206x290&quality=100&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20240705_147%2F1720142916385Hwze0_JPEG%2Fmovie_image.jpg"
+            },
+            {
+                name: "플라이 미 투 더 문",
+                release: "20240712",
+                audience: "2.4만",
+                ranking: 6,
+                rating: 8.50,
+                poster: "https://search.pstatic.net/common?type=f&size=206x290&quality=100&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20240715_183%2F1720971797486YQJCG_JPEG%2Fmovie_image.jpg"
+            },
+            {
+                name: "콰이어트 플레이스: 첫째 날",
+                release: "20240626",
+                audience: "54만",
+                ranking: 7,
+                rating: 4.45,
+                poster: "https://search.pstatic.net/common?type=f&size=206x290&quality=100&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20240620_222%2F1718859475580HS6BE_JPEG%2Fmovie_image.jpg"
+            }
+        ]
+
+        function showMovieInfo(sel){
+            let index = sel - 1;
+
+            alert(`제목: ${movies[index].name}`);
+            alert(`개봉: ${movies[index].release}`);
+            alert(`관객수: ${movies[index].audience}`);
+            alert(`순위: ${movies[index].ranking}`);
+            alert(`평점: ${movies[index].rating}`);
+
+            let movieInfo = "";
+            movieInfo += `<img id="movie-poster" src="">`;
+            movieInfo += `<p>제목: ${movies[index].name}</p>`;
+            movieInfo += `<p>개봉: ${movies[index].release}</p>`;
+            movieInfo += `<p>관객수: ${movies[index].audience}</p>`;
+            movieInfo += `<p>순위: ${movies[index].ranking}</p>`;
+            movieInfo += `<p>평점: ${movies[index].rating}</p><hr>`;
+            document.querySelector("#movie-info").innerHTML = movieInfo;
+
+            return movies[index].poster;
+        }
+
+        function showMovieList(){
+            movieList = document.querySelector("#movie-list");
+            let movieInfo = "";
+            for(let i=0; i<movies.length; i++){
+                movieInfo += `<h2>${i + 1}</h2>`;
+                movieInfo += `<img src="${movies[i].poster}">`;
+                movieInfo += `<p>제목: ${movies[i].name}</p>`;
+                movieInfo += `<p>개봉: ${movies[i].release}</p>`;
+                movieInfo += `<p>관객수: ${movies[i].audience}</p>`;
+                movieInfo += `<p>순위: ${movies[i].ranking}</p>`;
+                movieInfo += `<p>평점: ${movies[i].rating}</p><hr>`;
+            }
+            movieList.innerHTML = movieInfo;
+            movieList.classList.toggle("active");
+        }
+
+        let sel = parseInt(prompt("1~7 선택"));
+        let poster = showMovieInfo(sel);
+        document.querySelector("#movie-poster").src = poster;
+        
+    </script>
+</body>
+</html>
