@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let kors = [90, 80, 70, 99, 65, 70]
+    
+    //0. 모든 점수 출력하기
+    //1. 평균 구하기
+    //2. 평균보다 높은 학생 수 구하기
+
+    //0. 모든 점수 출력하기
+    console.log(kors[0]);
+    console.log(kors[1]);
+    console.log(kors[2]);
+    console.log(kors[3]);
+    console.log(kors[4]);
+    console.log(kors[5]);
+
+
+        alert(kors)
+        for(let i=0; i<kors.length; i++){ // i=1, i=2, i=3, 
+            console.log(kors[i])
+        }
+
+        //1. 평균 구하기
+        let sum = 0;
+        let avg;
+        sum = kors[0] + kors[1] + kors[2]+ kors[3]+ kors[4]+ kors[5]
+        avg = sum/kors.length;
+
+        /*
+        1. 총합계 구하기
+            반복
+            배열요소 가져오기
+            누적하기
+
+        2. 평균 구하기
+        3. 평균 출력하기
+        */
+        let total = 0
+        for(let i=0; i<kors.length; i++){
+            let kor = kors[i]
+            total = total + kor;
+        }
+        avg = total/kors.length
+        console.log(avg)
+        alert("평균은 " + avg + " 입니다")
+        document.write("평균은 " + avg + " 입니다" + "<br>") 
+
+        let count = 0
+        for(let i=0; i<kors.length; i++){
+            if(kors[i] > avg)
+            count++;
+        }
+
+        console.log(count);
+        alert("평균을 넘는 사람은 " + count + "명 입니다.")
+        document.write("평균을 넘는 사람은 " + count + "명 입니다.")
+    </script>
+</body>
+</html>
