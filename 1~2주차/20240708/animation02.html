@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation 연습</title>
+    <style>
+        section{
+            margin: 0;
+            padding: 0;
+            background: url(../images/우주\ 고해상도.jpg) no-repeat ;
+            background-size: cover;
+            height: 900px;
+            width: 100%;
+        }
+        .firPart span{
+            color: aliceblue;
+            font-size: 50px;
+            position: absolute;
+            top: 52%;
+            right: 5%;
+            animation: moveIn 2s ease-out;
+        }
+        p{
+            color: aliceblue;
+        }
+        pre{
+            color: aliceblue;
+        }
+        @keyframes moveIn {
+            from{
+                right: -10%;
+                opacity: 0;
+            }to{
+                right: 5%;
+                opacity: 0.8;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="firPart">
+            <span>pour un logical CRM,</span><br>
+            <p>simple, complet 
+                et intuitif
+            </p> <br>
+            
+        </div>
+        <pre class="secPart">
+            CRM 소프트웨어를 선택하고,
+            간단하고 완전하며
+            직관적인 
+        </pre>
+    </section>
+</body>
+</html>

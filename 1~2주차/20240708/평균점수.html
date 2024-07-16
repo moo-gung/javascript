@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .write {
+            width: 300px;
+            height: 150px;
+            border: solid 1px gray;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    kor, math, eng 점수를 입력받아 평균 점수를 나타내세요.
+
+    <script>
+        // let num = 9
+        // if (num % 2 ===0){
+        //     console.log("짝수");
+        // } else {
+        //     console.log("홀수")
+        // }
+
+        let kor = Number(prompt("국어 점수는?"))
+        let math = Number(prompt("수학 점수는?"))
+        let eng = Number(prompt("영어 점수는?"))
+
+        // kor = prompt("kor 점수를 입력하세요", "")
+        // math = prompt("math 점수를 입력하세요.", "")
+        // eng = prompt("eng 점수를 입력하세요.", "")
+
+        let sum = kor + math + eng
+        let avg = sum / 3;
+        let result = (kor + math + eng) / 3;
+        document.write("<h1>평균 점수는? " + result +
+            "점 입니다. </h2>"
+        )
+        if (avg >= 90) {
+            // message = '축 합격입니다!'
+            message = "A"
+            console.log("A")
+        } else if (avg >= 80) {
+            // message = '축 합격입니다!'
+            message = "B"
+            console.log("B")
+        } else if (avg >= 70) {
+            // message = '축 합격입니다!'
+            message = "C"
+            console.log("C")
+        } else {
+            // message = '불합격 재시험 대상입니다.'
+            message = "F"
+            console.log("F")
+        }
+        document.write( "당신의 학점은 " + message + " 입니다. 수고하셨습니다")
+
+    </script>
+</body>
+
+</html>

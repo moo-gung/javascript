@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 자바스크립트 이벤트</title>
+    <style>
+        button{
+            background-color: pink;
+            border: 0;
+            padding: 5px;
+        }
+        #detail{
+            display: none;
+            /* visibility: hidden; */
+        }
+    </style>
+</head>
+<body>
+    <div id="item">
+        <img src="../images/리트리버.jpg" width="300px" > <br>
+        <button onclick="showDetail()" id="open">상세 설명 보기</button>
+        <div id="detail">
+            <h4>리트리버</h4>
+            <p>과거에 주로 날짐승, 특히 오리나 거위 같이 물에 사는 새 등을 사냥할 때 이용하던 중~대형견을 통칭하며, Retrieve라는 영어 단어 뜻이 '되찾아오다'인 것에서 알 수 있듯이, 
+                총 같은 것으로 맞혀 떨어뜨린 사냥감을 물어오는 역할을 담당했던 견종들이다.
+                사냥꾼들의 실력이 전부 주몽이나 여갑순 수준은 아니기 때문에 최대한 접근하여 쏘는 것이 원칙이지만, 오리와 같은 새들이 의외로 귀가 밝아서 50 m의 거리에서도 사람의 접근을 알아채는 경우가 많은데, 
+                위협을 느끼면 수풀 속으로 몸을 숨기는 꿩이나 도요새와 달리 물새들은 즉시 하늘로 날아오르는 편이다.
+                [1] 이 때 산탄을 사용하면 평균적인 실력의 사냥꾼도 아직 속력이 붙지 못한 새를 잘 잡을 수 있지만, 새가 사람이 찾아오기 힘든 물이나 덤불 속으로 낙하할 수가 있다.
+                이런 상황에서 떨어진 새를 찾아서 물어 오는 역할을 담당했던 개이다.    
+                다른 개와 비교해서 리트리버가 가지는 특징은 이름에서도 비롯되듯 입질이 많은 편이다. 물론 중대형견이면서 사냥에도 동반되던 개이기에 활동성도 높은 편. 
+                입질을 잘 다스릴 방법을 습득시키지 못하거나 입질을 다른 곳으로 돌릴 방법을 찾지 못할 경우 공격의사와는 상관없이 사람에게 입질을 하거나 집안 물건들을 함부로 물어뜯을 우려가 매우 높다.
+            </p>
+            <button onclick="hideDetail()" id="close">상세 설명 닫기</button>
+        </div>
+    </div>
+
+    <script>
+       
+        //상세 설명 부분을 화면에 표시
+        function showDetail(){
+            document.querySelector('#detail').style.display = "block";
+            document.querySelector('#open').style.display = "none";
+        }
+        //상세 설명 부분 화면에서 감춤
+        function hideDetail(){
+            document.querySelector('#detail').style.display = "none";
+            document.querySelector('#open').style.display = "block";
+        }
+        // function showDetail(){
+        //     document.querySelector('#open').style.display = "none";
+        // }
+        // function hideDetail(){
+        //     document.querySelector('#open').style.display = "block";
+        // }
+    </script>
+</body>
+</html>

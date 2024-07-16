@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            display: flex;
+            justify-content: center;
+            border: solid 1px gray;
+        }
+
+        .big-box {
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+            display: flex;
+            justify-content: center; /* 좌우 관계 정렬*/
+            align-items: center; /* 상하 관계 정렬*/
+        }
+
+        .small-box {
+            width: 100px;
+            height: 100px;
+            background-color: chartreuse;
+            /* justify-content: center; */
+            /* position: absolute;
+            left: 50px;
+            top: 50px; */
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="big-box">
+            <div class="small-box">div2</div>
+        </div>
+    </section>
+</body>
+
+</html>

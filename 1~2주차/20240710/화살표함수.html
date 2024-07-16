@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            background-color: cornflowerblue;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"><img src="../images/전구 off.png" id="img" width="300px" height="350px"></div>
+    <!-- <div id="box"><img src="../images/전구 on.png" alt=""></div> -->
+
+    <script>
+        //이벤트 리스너 261쪽
+
+        const $box = document.querySelector("#img");
+        //마우스를 올리면
+        $box.addEventListener("mouseover", () => {
+            $box.src="../images/전구 on.png"
+        })
+        //마우스가 벗어나면
+        $box.addEventListener("mouseout", () => {
+            $box.src="../images/전구 off.png"
+        })
+    </script>
+</body>
+</html>

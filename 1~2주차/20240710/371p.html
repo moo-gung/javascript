@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>가고싶은 곳 먹고싶은 것</h3>
+    <button onclick="change1()">가고싶은 곳</button>
+    <button onclick="change2()">먹고싶은 것</button>
+    <hr>
+    <p>
+        <span class="place">제주도</span>에 가서 <span class="food">흑돼지</span>를 먹고싶어요. <br>
+        또한 <span class="place">부산</span>에 가서 <span class="food">어묵</span>을 먹고싶어요. <span class="place">전주</span>에서 먹는<br>
+        <span class="food">비빔밥</span>도 맛있겠죠?
+    </p>
+
+    <script>
+        function change1(){
+            let placeArray = document.getElementsByClassName("place")
+            for(i=0; i<placeArray.length; i++){
+                let place = placeArray[i];
+                place.style.color = "purple"
+                place.style.fontSize = "25px"
+                place.style.textDecoration = "underline"
+            }
+        }
+        function change2(){
+            let foodArray = document.getElementsByClassName("food")
+            for(i=0; i<foodArray.length; i++){
+                let food = foodArray[i];
+                food.style.color = "green"
+            }
+        }
+    </script>
+</body>
+</html>

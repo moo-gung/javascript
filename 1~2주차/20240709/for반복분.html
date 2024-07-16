@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for반복문</title>
+</head>
+<body>
+    <script>
+        //1부터 5까지 더하기
+        let sum = 0
+        sum +=1; // sum = sum + 1과 같다
+        sum +=2
+        sum +=3
+        sum +=4
+        sum +=5
+        document.write("1부터 5까지 합" + sum + "<br>")
+        document.write(`1부터 5까지 합 ${sum} 입니다. <br>`)
+
+        //for문으로 1부터 5까지 더하기
+        let sumFor = 0;
+        
+        for(let i=1; i<6; i++){
+            sumFor += i; //sumFor = sumFor + i
+
+        }
+        document.write(`😁1부터 5까지 합 ${sumFor} 입니다. <br>`)
+        
+        
+        //for문으로 1000까지 더하기
+        let sumS=0
+        for(let j=1; j<1001; j++){
+            sumS += j;
+        }
+        document.write("1000까지의 합은 " + sumS + " 입니다. <br> ")
+
+        //짝수만 더하기 방법 1
+        let sumEven = 0
+        for(let k=1; k<11; k+=2){
+            sumEven += k;
+        }
+        document.write("짝수만 더한 값 " + sumEven + " 입니다. <br>")
+
+        
+        // let n = 10;
+        // let sumE=0;
+        // for(let i=1; i<=n; i++){
+        //     if(i%2===1)
+        //     continue
+        //     sumE += i
+        //     document.write(i + "----" + sumE + "<br>")
+        // }
+
+        //짝수 더하기 방법2 (if 사용)
+        let sumE=0;
+        for(let i=1; i<=10; i++){
+            if(i%2===0){
+            sumE += i
+            document.write(i + "----" + sumE + "<br>")
+            }
+        }
+
+        //별찍기
+        // let = n prompt("정수를 입력하세요");
+
+        // 291
+        // for문은 조건식이 true인 동안 작업문을 반복하여 실행한다.
+        for(let i=0; i<10; i++){
+            document.writeln(i);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function sumMulti(x, y){ // 매개 변수
+            if(x == y){
+                return x * y;
+            } else {
+                return x + y;
+            }
+        }
+        console.log(sumMulti(5, 10)) // 인자
+        console.log(sumMulti(53, 42))
+        console.log(sumMulti(10, 10))
+        //함수를 여러번 실행 가능
+
+        let num1 = parseInt(prompt("비교할 첫 번째 숫자"))
+        let num2 = parseInt(prompt("비교할 두 번째 숫자"))
+        //parseInt 정수로 변환, parseFloat 실수로 변환
+
+        compareTwo (num1, num2);
+        // 호이스팅 : 함수 내의 변수 및 함수 선언을 가 유효 범위의 최상단으로
+        // 끌어오려주는 JS의 독특한 특징
+
+        function compareTwo(x, y){
+            if(x==y){
+                alert('${x}와 ${y}는 같다.')
+            } else if(x>y){
+                alert('${x}가 ${y}보다 큽니다.')
+            } else {
+                alert('${y}가 ${x}보다 큽니다.')
+            }
+        }
+
+    </script>
+</body>
+</html>

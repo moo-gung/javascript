@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #pic2{
+            display: none;
+            
+        }
+    </style>
+</head>
+<body>
+    <div><img src="../images/전구 off.png" id="pic1"></div>
+    <div><img src="../images/전구 on.png" id="pic2"></div>
+    <button class="on" onclick="change1()">켜기</button>
+    <button class="off" onclick="change2()">끄기</button>
+
+    <script>
+        function change1() {
+            document.querySelector("#pic1").style.display = "none"
+            document.querySelector("#pic2").style.display = "block"
+            document.querySelector(".on").style.display = "none"
+            document.querySelector(".off").style.display = "block"
+        }
+        function change2() {
+            document.querySelector("#pic1").style.display = "block"
+            document.querySelector("#pic2").style.display = "none"
+            document.querySelector(".off").style.display = "none"
+            document.querySelector(".on").style.display = "block"
+        }
+
+    </script>
+</body>
+</html>

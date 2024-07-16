@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 200px;
+            height: 200px;
+            border: 1px solid gray;
+        }
+        .rotate{
+            animation: anima 1s infinite ;
+            
+        }
+        .rotate2{
+            animation: anima2 1s infinite;
+        }
+        @keyframes anima {
+            from{
+                transform: rotate(0deg);
+            }to{
+                transform: rotate(360deg);
+            }
+        }
+        /* @keyframes anima2 {
+            from{
+                transform: rotate(90deg);
+            }to{
+                transform: rotate(-90deg);
+            }
+        } */
+    </style>
+</head>
+<body>
+    <h3>어지러워요</h3>
+    <hr>
+    <div class="rotate">
+        <img src="../images/뚱이.jpg" width="300px">
+    <hr>
+        <div class="rotate2">
+        <img src="../images/뚱이.jpg" width="300px">
+    </div>
+</body>
+</html>

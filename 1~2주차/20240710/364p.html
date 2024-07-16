@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>아래 글자를 클릭해보세요</h2>
+    <hr>
+    <p id="p" onclick="change()"> <span style="color: red;">여기를</span> 
+        <span style="color: blue;">클릭하세요</span></p>
+         
+        
+
+        <script>
+            function change() {
+            let p = document.getElementById("p")
+            p.innerHTML = "나의 강아지들 " + "<img src=../images/리트리버.jpg>" + "입니다."         
+            }
+        </script>
+</body>
+</html>

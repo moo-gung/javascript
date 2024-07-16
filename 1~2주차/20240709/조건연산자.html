@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건 연산자</title>
+</head>
+<body>
+    <p>3의 배수인지 확인</p>
+
+    <script>
+        let userNumber = Number(prompt("숫자를 입력하세요."));
+
+        //!는 아니다라는 뜻 null이 아니라면
+        // if(userNumber !==null){
+        //     if(userNumber % 3 === 0){
+        //     alert("3의 배수입니다.")
+        // } else{
+        //     alert("3의 배수가 아닙니다.")
+        // }
+            
+        // }
+
+        // 😁3항 연산자
+        if(userNumber !==null){
+            (userNumber % 3 === 0) ? alert("3의 배수입니다. ") : alert("3의 배수가 아닙니다.")
+
+        } // (조건) ? 참 : 거짓
+        else {
+            alert("입력이 취소됐습니다.")
+        }
+
+    </script>
+</body>
+</html>
