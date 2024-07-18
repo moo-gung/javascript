@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        border-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>종합 베스트셀러 도서</h3>
+    <hr />
+    <button onclick="showList()">목록보기</button>
+    <button onclick="hideList()">목록가리기</button>
+    <div id="list"></div>
+
+    <script>
+      let books = [
+        {
+          name: "세이노의 가르침",
+          author: "세이노",
+          price: 6480,
+          image:
+            "https://contents.kyobobook.co.kr/sih/fit-in/280x0/pdt/9791168473690.jpg",
+        },
+        {
+          name: "원띵(The One Thing)",
+          author: "게리 켈러",
+          price: 15120,
+          image:
+            "https://contents.kyobobook.co.kr/sih/fit-in/280x0/pdt/9788997575169.jpg",
+        },
+        {
+          name: "김미경의 마흔 수업",
+          author: "김미경",
+          price: 16200,
+          image:
+            "https://contents.kyobobook.co.kr/sih/fit-in/280x0/pdt/9791198013026.jpg",
+        },
+        {
+          name: "불편한 편의점(벚꽃 에디션)",
+          author: "김호연",
+          price: 12600,
+          image:
+            "https://contents.kyobobook.co.kr/sih/fit-in/280x0/pdt/9791161571188.jpg",
+        },
+        {
+          name: "스즈메의 문단속",
+          author: "신카이 마코토",
+          price: 11700,
+          image:
+            "https://contents.kyobobook.co.kr/sih/fit-in/280x0/pdt/9791169791977.jpg",
+        },
+      ];
+
+      function showList() {
+        let bookList = document.getElementById("list");
+        bookList.style.display = "block";
+        let bookInfo = "";
+
+        for (let i = 0; i < books.length; i++) {
+          bookInfo +=
+            "<img src=" +
+            books[i].image +
+            " width='200px' height='300px'> <br>";
+          bookInfo += "제목: " + books[i].name + "<br>";
+          bookInfo += "저자: " + books[i].author + "<br>";
+          bookInfo += "가격: " + books[i].price + "원 <br><br>";
+
+          list.innerHTML = bookInfo;
+        }
+      }
+      function hideList() {
+        let hide = document.getElementById("list");
+        hide.style.display = "none";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      function btn() {
+        let ul = document.querySelector("#ul");
+        let li = document.createElement("li");
+        
+        li.innerHTML = ""
+        ul.appendChild(li)
+
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="btn()">추가하기</button>
+
+    <ul id="ul"></ul>
+  </body>
+</html>

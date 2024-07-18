@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        //splice 메서드는 원본배열의 크기가 줄어듬, 반환값이 삭제된 요소를 배열로 반환된다.
+        let arr = ["one", "two", "three", "four", "five"]
+
+        let deletedItemArr = arr.splice(0,1); // (0번째부터, 1개)
+        console.log(deletedItemArr);
+        let deleteItem = deletedItemArr[0]; //지운거의 0번째
+        console.log(deleteItem)
+
+        console.log(arr) //결과 : 제거된 요소를 제외한 배열
+
+    </script>
+</body>
+</html>

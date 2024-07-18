@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      let imgNames = [
+        "media/media/Penguins.png",
+        "media/media/Lighthouse.png",
+        "media/media/Chrysanthemum.png",
+        "media/media/Desert.png",
+        "media/media/Hydrangeas.png",
+        "media/media/Jellyfish.png",
+        "media/media/Koala.png",
+        "media/media/Tulips.png",
+      ];
+      let index = 0; //이미지 배열의 인덱스
+
+      function nextImg() {
+        index++;
+
+        if (index >= imgNames.length) {
+          index = 0;
+        }
+        let gallery = document.querySelector(".gallery");
+
+        gallery.style.backgroundImage = "url('" + imgNames[index] + "')";
+        gallery.style.backgroundPosition = "center";
+        gallery.style.backgroundSize = "cover";
+      }
+    </script>
+
+    <style>
+      .gallery-wrap {
+        width: 300px;
+        height: 300px;
+        border: 1px solid black;
+
+        position: relative;
+      }
+      .gallery {
+        width: 300px;
+        height: 300px;
+        background-image: url("media/media/Penguins.png");
+        background-size: cover;
+        background-position: center;
+      }
+      .leftBtn,
+      .rightBtn {
+        width: 30px;
+        height: 30px;
+        border: 1px solid black;
+        border-radius: 50%;
+        text-align: center;
+
+        position: absolute;
+        top: 145px;
+      }
+      .leftBtn {
+        left: 0px;
+      }
+      .rightBtn {
+        right: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gallery-wrap">
+      <div class="gallery"></div>
+      <div class="leftBtn">p</div>
+      <div class="rightBtn" onclick="nextImg()">n</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function createE(){
+            //태그 생성, 추가
+            //부모 요소 선택 후 부모 요소에 추가
+
+            let ul = document.getElementById("result");
+            let li = document.createElement("li");
+            li.innerHTML = "사과";
+            ul.appendChild(li);
+
+            //li 태그 클릭 시 삭제
+            li.addEventListener("click", function(){
+                li.remove(); // this.remove()도 가능 this는 메서드의 주체
+                // let p = document.parentElement();
+                // p.remveChild(li)
+            })
+        }
+
+    </script>
+</head>
+<body>
+    
+
+    <button onclick="createE()">클릭</button>
+
+    <ul id="result">
+
+    </ul>
+</body>
+</html>

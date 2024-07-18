@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        function hello(func){ //함수를 매개변수로 받을 수 있다. 매개변수로 받음 함수 => 콜백함수
+
+            alert("이 코드 실행해줘")
+            func ();
+        }
+
+
+        // hello( function(){}); 익명
+        hello( function(){      // 함수를 전달 (콜백함수)
+            alert("익명 함수")  // 1. 익명, 2. 함수 이름으로 만들고
+        });                             
+                                               
+        //특정 시간 후에 코드를 실행시켜주는 함수
+        //함수, 시간(밀리세컨드)
+        setTimeout( function(){
+            alert("익명 함수 사용한 것");
+        }, 3000);
+
+        hello(a);
+        //함수 사용 
+        function a (){
+            alert(" a 함수 만들고 사용한 것");
+        }
+        // (함수, 시간)
+        setTimeout(a, 5000) // setTimeout(a(), 3000) 주의 사항
+                            // => 함수 이름만 작성해야함 a()는 함수가 호출 되고 실행된 다음 반환값이 매개변수
+    </script>
+</body>
+</html>

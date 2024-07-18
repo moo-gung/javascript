@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border: 1px solid;
+        border-collapse: collapse;
+        margin: 0 auto;
+      }
+      td,
+      th {
+        border: 1px solid;
+        padding: 10px;
+      }
+    </style>
+
+    <script>
+        // let result = document.querySelectorAll(".result")
+        // result = [
+        //   "https://www.musinsa.com/app/goods/1891201",
+        //   "https://www.musinsa.com/app/goods/3813327",
+        //   "https://www.soldout.co.kr/trade/detail/29838?af_item_id=29838&af_item_title=%EB%B0%94%EB%B2%84%20%EC%9C%8C%ED%8A%BC%20%EC%9B%B0%EB%A7%81%ED%84%B4%20%EB%B6%80%EC%B8%A0%20%EB%B8%94%EB%9E%99%20%28W%29&c=musinsa_search_result&pid=musinsa_search&deep_link_value=msoldoutapp%3A%2F%2Fwebview%2Ftype%3D1%26style%3D2%26header%3D0%26url%3Dhttps%253A%252F%252Fsvc.soldout.co.kr%252Ftrade%252Fproduct%252F29838%253Fproduct_size_option_id%253D0%2526open_size%253D0&af_keyword=%EB%B0%94%EB%B2%84%20%EC%9C%8C%ED%8A%BC%20%EC%9B%B0%EB%A7%81%ED%84%B4%20%EB%B6%80%EC%B8%A0%20%EB%B8%94%EB%9E%99&af_xp=custom&af_brand=%EB%B0%94%EB%B2%84",
+        //   "https://www.musinsa.com/app/goods/3284713",
+        // ];
+
+        // for(let i=0; i<result.length; i++){
+        //     result[i];
+        // }
+
+        function calPrice(obj){
+            let qty = obj.value
+            let priceTag = obj.parentElement.previousElementSibling;
+            let amtTag = obj.parentElement.nextElementSibling;
+
+            let price = priceTag.innerHTML;
+            amtTag.innerHTML = qty * price
+        }
+        
+    </script>
+  </head>
+  <body>
+    <div>
+      <table>
+        <caption>
+          CART LIST
+        </caption>
+        <thead>
+          <th>선택</th>
+          <th>브랜드</th>
+          <th></th>
+          <th>제품명</th>
+          <th>단가</th>
+          <th>수량</th>
+          <th>가격</th>
+          
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="checkbox" class="cb" /></td>
+            <td>헌터</td>
+            <td>이미지</td>
+            <td>[MEN] 오리지날 플레이 숏 레인부츠 - 블랙</td>
+            <td>155000</td>
+            <td><input type="text" value="0" onkeyup="calPrice(this)"></td>
+            <td class="amt">0</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" class="cb" /></td>
+            <td>문스타</td>
+            <td>이미지</td>
+            <td>810s 마르케 모디 Charcoal</td>
+            <td>112000</td>
+            <td><input type="text" value="0" onkeyup="calPrice(this)"></td>
+            <td class="amt">0</td>
+
+          </tr>
+          <tr>
+            <td><input type="checkbox" class="cb" /></td>
+            <td>바버</td>
+            <td>이미지</td>
+            <td>바버 윌튼 웰링턴 부츠 블랙</td>
+            <td>130000</td>
+            <td><input type="text" value="0" onkeyup="calPrice(this)"></td>
+            <td class="amt">0</td>
+
+          </tr>
+          <tr>
+            <td><input type="checkbox" class="cb" /></td>
+            <td>드로우핏</td>
+            <td>이미지</td>
+            <td>모던 첼시 레인 부츠 [BLACK]</td>
+            <td>97600</td>
+            <td><input type="text" value="0" onkeyup="calPrice(this)"></td>
+            <td class="amt">0</td>
+
+          </tr>
+        </tbody>
+      </table>
+      <div>
+        <p>
+            <button onclick="itemDelete()">삭제</button>
+        </p>
+        <p id="total">
+            총 결제 금액 <span id="total-price"> 0</span> 원
+        </p>
+
+      
+    </div>
+    </div>
+  </body>
+</html>

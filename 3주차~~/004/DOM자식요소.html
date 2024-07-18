@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>div 태그 내의 자식 요소 선택하기</h3>
+    <hr>
+
+    <div id="book">
+        <p>세이노의 가르침</p>
+        <p>원띵(The One Thing)</p>
+        <p>김미경의 마흔 수업</p>
+        <p>불편한 편의점(벚꽃 에디션)</p>
+        <p>스즈메의 문단속</p>
+
+    </div>
+
+
+    <script>
+        let book = document.getElementById("book")
+        let pE1 = book.firstElementChild;
+        let pE2 = pE1.nextElementSibling;
+        let pE3 = book.lastElementChild;
+
+        let book1 = pE1.innerHTML;
+        let book2 = pE2.innerHTML;
+        let book3 = pE3.innerHTML;
+
+        console.log(book1)
+        console.log(book2)
+        console.log(book3)
+    </script>
+</body>
+</html>

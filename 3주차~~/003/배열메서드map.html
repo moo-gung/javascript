@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let student = ["김솔", "김도현", "김무궁", "김세중", "김세현", "김정석","김채운", "백바울", "소병학", "송병화", "송수빈",
+        "용지민","이상민","이효진","장경호", "전우선", "전지형", "정보란","주상길","주형준","최문길","최형진","하예진","황지영"];
+
+        //배열의 요소의 내용을 변경하여 새로운 배열을 반환한다.
+        //예시) "김무궁" => "김무궁님" or "김무궁" => <div> 김무궁</div>
+
+        student.forEach(function(item, index){
+            console.log(item, index);
+        });
+
+
+        let newstudent = student.map(function(item, index){
+            return item + "님"
+        });
+
+        console.log(newstudent)
+
+        let newstudent3 = student.map((item, index) => item + "씨"); //화살표 return 생략
+        console.log(newstudent3)
+
+        let newstudent2 = new Array(24); // [24]만 써도 작동함
+
+        for(let i=0; i<student.length; i++){
+            let name = student[i];
+            newstudent2[i] = "<div>" + name + "</div>"
+        };
+
+        console.log(newstudent2)
+
+
+        let fruit = ["사과", "딸기", "수박", "멜론", "복숭아"];
+
+        fruit.forEach(function(item, index){
+            document.write(item + "<br>")
+        })
+
+        let newfruit = fruit.map(function (item, index){
+            return item + "!";
+            document.write(newfruit);
+        });
+    </script>
+</body>
+</html>
