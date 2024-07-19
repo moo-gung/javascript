@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            width: 1200px;
+            border: 1px solid black;
+
+            margin: 0 auto;
+        }
+        header{
+            height: 100px;
+            border: 1px solid black;
+            
+
+            position: relative;
+            
+        }
+        header .img{
+            width: 250px;
+            height: 70px;
+            /* border: 1px solid aliceblue; */
+            background-image: url(/자바스크립트/images/images/logo.png);
+            background-repeat: no-repeat;
+
+            position: absolute;
+            top: 5px;
+            left: 10px;
+        }
+        header .search{
+            width: 100px;
+            height: 50px;
+            border: 1px solid aliceblue;
+
+            /* position: absolute;
+            top: 25px;
+            right: 5px; */
+        }
+        nav{
+            height: 60px;
+            border: 1px solid black;
+        }
+        /* section{
+            
+        } */
+        footer{
+            height: 100px;
+            border: 1px solid black;
+            display: flex;
+            padding: 10px;
+        }
+        footer div{
+            /* border: 1px solid black; */
+            width: 33%;
+            height: 100px;
+            line-height: 100px;
+        }
+
+        /*검색바 css*/
+        header  .search{
+            width: 300px;
+            height: 50px;
+            border:1px solid black;
+            display: flex;
+            position:absolute;
+            right: 0px;
+            bottom: 0px;
+        }
+        .search input{
+            width: 230px;
+            margin-left: 20px;
+            border: none;
+            outline: none;
+        }
+        .search_btn{
+            margin-top: 5px;
+            width: 40px ;
+            height: 40px;
+            background-color: antiquewhite;
+            background-image: url( https://previews.123rf.com/images/swavo/swavo1409/swavo140900005/31571158-%EB%8F%8B%EB%B3%B4%EA%B8%B0-%EC%95%84%EC%9D%B4%EC%BD%98.jpg) ;
+            background-position: center;
+            background-size: cover;
+        }
+        nav ul{
+            list-style: none;
+
+            display: flex;
+            float: right;
+            margin-right: 10px;
+        }
+        nav ul li{
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+
+        /* 목록 만들기*/
+        section ul{
+            width: 900px;
+            /* border: 1px solid black; */
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 auto;
+        }
+
+        section ul li{
+            width: 280px;
+            height: 300px;
+            border: 1px solid black;
+            padding: 10px;
+            box-sizing: border-box; /* 패딩을 추가해도 박스의 크기가 커지지 않음*/
+            text-align: center;
+            margin-left: 15px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="wrap">
+        <header>
+            <!--로고 이미지-->
+            <div class="img"></div>
+            <!--검색바-->
+            <div class="search">
+                <input type="text">
+                <div class="search_btn"></div>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li> <a href="login.html">로그인</a></li>
+                <li> <a href="joinus.html">회원가입</a></li>
+                <li> <a href="index4.html">홈으로</a></li>
+            </ul>
+        </nav>
+        <section>
+            <ul>
+                <li>
+                    <img src="/자바스크립트/images/images/img01.png" alt="">
+                    <p>자바웹개발과정</p>
+                    <p>0701개강</p>
+                </li>
+                <li>
+                    <img src="/자바스크립트/images/images/img01.png" alt="">
+                    <p>자바웹개발과정</p>
+                    <p>0701개강</p>
+                </li>
+                <li>
+                    <img src="/자바스크립트/images/images/img01.png" alt="">
+                    <p>자바웹개발과정</p>
+                    <p>0701개강</p>
+                </li>
+                <li>
+                    <img src="/자바스크립트/images/images/img01.png" alt="">
+                    <p>자바웹개발과정</p>
+                    <p>0701개강</p>
+                </li>
+                <li>
+                    <img src="/자바스크립트/images/images/img01.png" alt="">
+                    <p>자바웹개발과정</p>
+                    <p>0701개강</p>
+                </li>
+                <li>
+                    <img src="/자바스크립트/images/images/img01.png" alt="">
+                    <p>자바웹개발과정</p>
+                    <p>0701개강</p>
+                </li>
+            </ul>
+        </section>
+        <footer>
+            <div><img src="/자바스크립트/images/images/footer_acorn.png" alt=""></div>
+            <div> (주)에이콘이즈 에이콘아카데미(홍대)</div>
+            <div> COPYRIGHT(C) HBILAB ALL RIGHTS RESERVED.</div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    header {
+      /* width: 900px; */
+      height: 100px;
+      border: 1px solid black;
+      background-color: rgb(245, 248, 248);
+      position: relative;
+    }
+
+    header .title {
+      width: 100px;
+      height: 50px;
+      /* border: 1px solid black; */
+      position: absolute;
+      top: 20px;
+      left: 10px;
+    }
+
+    header .search {
+      /* width: 50px;
+        height: 50px; */
+      /* border: 1px solid black; */
+      display: flex;
+      padding: 5px;
+      position: absolute;
+      right: 10px;
+      bottom: 20px;
+    }
+
+    .search input {
+      width: 200px;
+      height: 40px;
+      border: none;
+      outline: none;
+    }
+
+    .search .search_btn {
+      width: 50px;
+      height: 40px;
+      /* border: 1px solid black; */
+      background-image: url(/자바스크립트/images/images/검색.png);
+      background-position: center;
+      background-size: cover;
+    }
+
+    nav {
+      /* width: 900px; */
+      height: 40px;
+      border: 1px solid black;
+      padding: 20px;
+      background-color: rgb(232, 243, 243);
+    }
+    nav ul{
+      list-style: none;
+      display: flex;
+      margin-left: -10px;
+    }
+    nav li{
+      padding: 5px;
+      margin-top: -10px;
+      margin-left: 5px;
+    }
+    li a{
+      text-decoration: none;
+      color: black;
+    }
+
+    section {
+      /* width: 900px; */
+      height: 600px;
+      border: 1px solid black;
+    }
+
+    section ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+
+    section ul li {
+      width: 300px;
+      padding: 20px;
+      border: 0.5px solid rgb(255, 241, 241);
+      text-align: center;
+      font-size: 13px;
+      position: relative;
+    }
+    li .box{
+      width: 130px;
+      padding: 10px;
+      background-color: black;
+      color: red;
+      font-size: 20px;
+      position: absolute;
+      top: 0;
+      }
+
+    footer {
+      /* width: 900px; */
+      height: 60px;
+      background-color: rgb(233, 239, 239);
+      border: 1px solid black;
+      display: flex;
+      padding: 10px;
+      /* text-align: center; */
+    }
+    footer div{
+      width: 33%;
+      height: 60px;
+      line-height: 60px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="title">
+        <img src="/자바스크립트/images/images/logo.png" alt="로고" />
+      </div>
+      <div class="search">
+        <input type="text" />
+        <div class="search_btn"></div>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="login.html">로그인</a></li>
+        <li><a href="joinus.html">회원가입</a></li>
+        <li><a href="index.html">홈으로</a></li>
+      </ul>
+    </nav>
+    <section>
+      <ul>
+        <li>
+          <img src="/자바스크립트/images/images/img01.png" width="200px" height="220px" />
+          <p>프로젝트기반 빅데이터분석 과정</p>
+          <div class="box">Bigdata</div>
+        </li>
+        <li>
+          <img src="/자바스크립트/images/images/img02.png" width="200px" height="220px" />
+          <p>자바(JAVA) & 안드로이드 개발자 형성과정</p>
+          <div class="box">Adroid</div>
+        </li>
+        <li>
+          <img src="/자바스크립트/images/images/img03.png" width="200px" height="220px" />
+          <p>웹기반 프론트엔드 자바개발자 양성과정</p>
+          <div class="box">Front</div>
+        </li>
+      </ul>
+    </section>
+    <footer>
+      <div><img src="/자바스크립트/images/images/footer_acorn.png" alt=""></div>
+      <div>(주)에이콘이즈 에이콘아카데미(홍대)</div>
+      <div>COPYRIGHT(C) HBILAB ALL RIGHTS RESERVED.</div>
+    </footer>
+  </div>
+</body>
+
+</html>

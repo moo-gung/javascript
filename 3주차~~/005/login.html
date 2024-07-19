@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrap {
+        width: 1000px;
+        height: 900px;
+        /* border: 1px solid black; */
+        margin: 0 auto;
+        margin-top: 50px;
+      }
+      .caption {
+        width: 500px;
+        /* border: 1px solid black; */
+        margin: 0 auto;
+        text-align: center;
+      }
+      .login_wrap {
+        width: 500px;
+        border: 1px solid black;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .login_wrap ul {
+        list-style: none;
+        padding: 20px;
+      }
+      .login_wrap ul li {
+        margin-top: 10px;
+        
+      }
+      .login_wrap div {
+        width: 100px;
+        height: 60px;
+        /* border: 1px solid black; */
+        border-radius: 5%;
+        background-color: black;
+        color: aliceblue;
+        margin-top: 45px;
+        text-align: center;
+      }
+      .login_opt {
+        /* border: 1px solid black; */
+        margin: 0 auto;
+      }
+      .login_opt ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        margin-right: 50px;
+      }
+      li a{
+        text-decoration: none;
+        padding: 50px;
+        color: gray;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="caption">
+        <h2>로그인</h2>
+      </div>
+
+      <div class="login_wrap">
+        <ul>
+          <li>ID <input type="text" /></li>
+          <li>PW <input type="text" /></li>
+        </ul>
+        <div>
+          <p>login</p>
+        </div>
+      </div>
+      <div class="login_opt">
+        <ul>
+          <li><a href="">아이디 찾기</a></li>
+          <li>|</li>
+          <li><a href="">비밀번호 찾기</a></li>
+          <li>|</li>
+          <li><a href="">회원가입</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
