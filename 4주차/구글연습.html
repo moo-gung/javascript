@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="search">
+        <div class="search-bar">
+          <input type="text" id="search-word" />
+          <button onclick="saveData()">검색</button>
+          <button onclick="loadData()">조회</button>
+          <!-- 검색목록 -->
+          <ul class="search-list">
+  
+          </ul>
+        </div>
+      </div>
+
+      <script>
+        let storageArray = [];
+
+        // 로컬저장소에 저장
+        function saveData(){
+            let searchWord = document.querySelector("#search-word").value;
+            storageArray.push(searchWord);
+            localStorage.setItem("searchWord", JSON.stringify(storageArray))
+            // console.log(searchWord)
+            // alert("저장")
+            // loadData();
+        }
+
+        //배열로 변환
+        function loadData(){
+            let wordList = localStorage.getItem("searchWord");
+            let readSearch = JSON.parse(wordList)
+            console.log(readSearch)
+            // alert("조회")
+        
+            let str = "";
+            for(let i=0; i<readSearch.length; i++){
+                let item = readSearch[i]
+                str += "<li>" + item + " <button onclick='deleteItem(this)'> X </button> </li>"
+
+                
+            }
+            let list = document.querySelector(".search-list");
+                list.innerHTML = str;
+        
+        }
+        function deleteItem(obj){
+            let deleteData = obj.parentElement.remove();
+             let index = storageArray.indexOf(deleteData)
+             let deleteItem1 = storageArray.splice(index, 1)[0];
+
+             localStorage.setItem("searchWord", JSON.stringify(storageArray))
+             alert("데이터가 삭제되었습니다.")
+            // loadData();
+        }
+      </script>
+</body>
+</html>

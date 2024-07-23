@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3>이벤트객체 정보를 이용해서 선택한 요소의 내용</h3>
+    
+    <div  class="item" id="menu1">아메리카노</div>
+    <div  class="item" id="menu2">라떼</div>
+    <div  class="item" id="menu3">망고쥬스</div>
+
+    <script>
+        let menu1 = document.getElementById("menu1")
+        menu1.addEventListener("click", function(e){
+           let content = e.target.innerHTML;
+           alert(content)
+           console.log(e);
+        })
+    </script>
+</body>
+</html>

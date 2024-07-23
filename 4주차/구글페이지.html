@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        list-style: none;
+      }
+      nav {
+        /* border: 1px solid black; */
+        height: 100px;
+        background-color: lightblue;
+        display: flex;
+
+        margin-top: 100px;
+        /* 부모는 높이가 있어여 함 */
+        position: relative;
+      }
+      .menu {
+        height: 100px;
+        position: absolute; /* 크기가 내용만큼 줄어듬 */
+        right: 80px;
+        /* border: 1px solid black; */
+        display: flex;
+        align-items: center;
+      }
+      .item1 {
+        font-size: 12px;
+        text-align: center;
+        border: 0.5px solid lightgray;
+        border-radius: 50%;
+      }
+      .item1:hover {
+        background-color: antiquewhite;
+      }
+      .item1 {
+        height: 60px;
+        width: 60px;
+        line-height: 60px;
+      }
+      .item2 {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-left: 5px;
+
+        background-image: url(https://lh3.googleusercontent.com/ogw/ADGmqu_sKQ74r14XW5bWUAIRoXn7hut8HTvtMAAH_iD3EA=s64-c-mo);
+        background-size: cover;
+        background-position: center;
+      }
+      .item2:hover {
+        box-shadow: 0px 0px 10px 0px rgb(83, 173, 106);
+      }
+
+      .logo-title {
+        /* border: 1px solid black; */
+        text-align: center;
+        margin-top: 100px;
+      }
+      .logo-title img {
+        width: 300px;
+        height: 120px;
+      }
+      .search {
+        /* border: 1px solid black; */
+        margin-top: 50px;
+      }
+      .search-bar {
+        width: 600px;
+        height: 60px;
+        border: 1px solid black;
+        border-radius: 30px;
+        margin: 0 auto;
+      }
+      .search-bar input {
+        width: 70%;
+        height: 40px;
+        margin-left: 20px;
+        margin-top: 10px;
+
+        border: none;
+        outline: none;
+      }
+      .search-list {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- nav영역 -->
+    <nav>
+      <div class="menu">
+        <div class="item1">Gmail</div>
+        <div class="item1">로그인</div>
+        <div class="item1">이미지</div>
+        <div class="item2"></div>
+      </div>
+    </nav>
+
+    <!-- 로고 타이틀 영역 -->
+    <div class="logo-title">
+      <img
+        src="https://www.google.co.kr/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+      />
+    </div>
+
+    <!-- 검색바 영역 -->
+    <div class="search">
+      <div class="search-bar">
+        <input type="text" id="search-word" onfocus="showList()" onblur="hideList()"/>
+        <button onclick="saveData()">검색</button>
+        <!-- <button onclick="loadData()">조회</button> -->
+        <!-- 검색목록 -->
+        <ul class="search-list"></ul>
+      </div>
+    </div>
+
+    <script>
+      function showList() {
+        //검색 목록 영역 보이게
+        //검색바의 크기를 auto로 설정(내용만큼 크기가 결정됨)
+
+        let search_list = document.querySelector(".search-list");
+        let search_bar = document.querySelector(".search-bar");
+        search_list.style.display = "block";
+        search_bar.style.height = "auto";
+      }
+      function hideList() {
+        setTimeout(function () {
+          let search_list = document.querySelector(".search-list");
+          let search_bar = document.querySelector(".search-bar");
+          search_list.style.display = "none";
+          search_bar.stye.height = "auto";
+        }, 2000);
+      }
+
+      let storageArray = [];
+
+      // 로컬저장소에 저장
+      function saveData() {
+        let searchWord = document.querySelector("#search-word").value;
+        storageArray.push(searchWord);
+        localStorage.setItem("searchWord", JSON.stringify(storageArray));
+        // console.log(searchWord)
+        // alert("저장")
+        // loadData();
+      }
+
+      //배열로 변환
+      function loadData() {
+        let wordList = localStorage.getItem("searchWord");
+        let readSearch = JSON.parse(wordList);
+        console.log(readSearch);
+        // alert("조회")
+
+        let str = "";
+        for (let i = 0; i < readSearch.length; i++) {
+          let item = readSearch[i];
+          str +=
+            "<li>" +
+            item +
+            " <button onclick='deleteItem(this)'> X </button> </li>";
+        }
+        let list = document.querySelector(".search-list");
+        list.innerHTML = str;
+      }
+      function deleteItem(obj) {
+        let deleteData = obj.parentElement.remove();
+        let index = storageArray.indexOf(deleteData);
+        let deleteItem1 = storageArray.splice(index, 1)[0];
+
+        localStorage.setItem("searchWord", JSON.stringify(storageArray));
+        alert("데이터가 삭제되었습니다.");
+        // loadData();
+      }
+    </script>
+  </body>
+</html>
