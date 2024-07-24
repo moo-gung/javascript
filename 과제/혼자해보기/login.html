@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        header{
+            height: 100px;
+            background-color: rgb(245, 248, 248);
+            /* border: 1px solid black; */
+            
+            position: relative;
+        }
+        .title{
+            /* border: 1px solid black; */
+            height: 70px;
+            width: 200px;
+            
+            position: absolute;
+            left: 10px;
+            top: 20px;
+        }
+        .search{
+            /* width: 300px; */
+            height: 50px;
+            /* border: 1px solid black; */
+
+            position: absolute;
+            right: 10px;
+            bottom: 20px;
+
+            display: flex;
+        }
+        .search input{
+            border-style: none;
+            outline: none;
+        }
+        nav{
+            height: 40px;
+            padding: 20px;
+            background-color: rgb(232, 243, 243);
+            /* border: 1px solid black; */
+        }
+        nav ul{
+            list-style: none;
+            display: flex;
+            margin: 10px;
+            margin-left: -20px;
+        }
+        nav ul li{
+            padding: 5px;
+            margin-top: -10px;
+        }
+        li a{
+            text-decoration: none;
+            color: black;
+        }
+        section{
+            height: 600px;
+            /* border: 1px solid black; */
+            text-align: center;
+        }
+        .wrap{
+            width: 400px;
+            padding: 20px;
+            border: 0.5px solid rgb(234, 222, 222);
+            margin: 0 auto;
+        }
+        .logImg{
+            width: 300px;
+            height: 300px;
+            /* border: 1px solid black; */
+            background-image: url(/자바스크립트/images/images/login_logo.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            padding: 10px;
+            margin: 0 auto;
+        }
+        .logInfo input{
+            width: 98%;
+            height: 40px;
+            margin-top: 5px;
+        }
+        .logInfo button{
+            width: 100%;
+            height: 50px;
+            background-color: silver;
+            border: 0;
+            margin-top: 10px;
+        }
+
+        li img{
+            width: 200px;
+            height: 220px;
+        }
+        .box{
+            background-color: black;
+            color: red;
+            width: 130px;
+            padding: 10px;
+            font-size: 20px;
+            position: absolute;
+            top: 0;
+        }
+        li p{
+            font-size: 15px;
+        }
+        footer{
+            height: 60px;
+            background-color: rgb(233, 239, 239);
+            /* border: 1px solid black; */
+
+            display: flex;
+            
+        }
+        footer div{
+            /* border: 1px solid black; */
+            width: 33%;
+            height: 60px;
+            line-height: 60px;
+        }
+    </style>
+        
+
+</head>
+<body>
+    <header>
+        <div class="title"><img src="/자바스크립트/images/images/logo.png" ></div>
+        <div class="search">
+             <input type="text"> 
+             <img src="/자바스크립트/images/images/검색.png" width="50px" height="50px">
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="login.html">로그인</a></li>
+            <li><a href="joinus.html">회원가입</a></li>
+            <li><a href="index2.html">홈으로</a></li>
+        </ul>
+    </nav>
+    <section>
+        <form name="frm">
+            <div class="wrap">
+                <div class="logImg"></div>
+                <div class="logInfo">
+                    <input type="text" placeholder="아이디" name="userid"> 
+                    <input type="password" placeholder="비번" name="userpw"> 
+                    <button onclick="check()">로그인</button>
+                </div>
+            </div>
+        </form>
+    </section>
+    <footer>
+        <div><img src="/자바스크립트/images/images/footer_acorn.png"></div>
+        <div>(주)에이콘이즈 에이콘아카데미(홍대)</div>
+        <div>COPYRIGHT(C) HBILAB ALL RIGHTS RESERVED.</div>
+    </footer>
+
+    <script>
+        let frm = document.frm;
+        let userid = frm.userid;
+        let userpw = frm.userpw;
+
+        function check(){
+            if(userid.value == ""){
+                alert("아이디를 입력하세요");
+                userid.focus();
+                return;
+            }else if(userpw.value == ""){
+                alert("비밀번호를 입력하세요");
+                userpw.focus();
+                return;
+            }else{
+                alert("로그인 되었습니다.");
+            }
+        }
+    </script>
+</body>
+</html>
