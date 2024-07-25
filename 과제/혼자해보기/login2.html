@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        header {
+            height: 100px;
+            background-color: rgb(245, 248, 248);
+
+            position: relative;
+        }
+
+        .title {
+            position: absolute;
+            left: 10px;
+            top: 20px;
+        }
+
+        .search {
+            height: 50px;
+            width: 200px;
+            /* border: 1px solid black; */
+
+            position: absolute;
+            bottom: 20px;
+            right: 10px;
+
+            display: flex;
+        }
+
+        .search input {
+            height: 50px;
+            width: 150px;
+            border: none;
+            outline: none;
+        }
+
+        .search img {
+            width: 50px;
+            height: 53px;
+        }
+
+        nav {
+            height: 40px;
+            padding: 20px;
+            background-color: rgb(232, 243, 243);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin-top: 0;
+        }
+
+        nav ul li {
+            padding: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        section {
+            height: 600px;
+        }
+
+        .log_wrap {
+            width: 400px;
+            padding: 20px;
+            border: 0.5px solid rgb(234, 222, 222);
+            margin: 0 auto;
+        }
+
+        .log_img {
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            background-image: url(/자바스크립트/images/images/login_logo.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .log_info {
+            padding: 10px;
+        }
+
+        .log_info input {
+            width: 98%;
+            height: 40px;
+            margin-top: 5px;
+        }
+
+        .log_info button {
+            width: 100%;
+            height: 50px;
+            background-color: silver;
+            border: 0;
+            margin-top: 10px;
+        }
+
+        footer {
+            height: 60px;
+            background-color: rgb(233, 239, 239);
+            display: flex;
+        }
+
+        footer div {
+            width: 33%;
+            height: 60px;
+            line-height: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="title">
+            <img src="/자바스크립트/images/images/logo.png" />
+        </div>
+        <div class="search">
+            <input type="text" />
+            <img src="/자바스크립트/images/images/검색.png" width="50px" height="50px" />
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="login.html">로그인</a></li>
+            <li><a href="joinus.html">회원가입</a></li>
+            <li><a href="index2.html">홈으로</a></li>
+        </ul>
+    </nav>
+    <form name="frm">
+        <section>
+            <div class="log_wrap">
+                <div class="log_img"></div>
+                <div class="log_info">
+                    <input  type="text" placeholder="아이디" name="userid" />
+                    <input  type="password" placeholder="비밀번호" name="userpw" />
+                    <button  type="button" onclick="check()">로그인</button>
+                </div>
+            </div>
+        </section>
+    </form>
+    <footer>
+        <div><img src="/자바스크립트/images/images/footer_acorn.png" /></div>
+        <div>(주)에이콘이즈 에이콘아카데미(홍대)</div>
+        <div>COPYRIGHT(C) HBILAB ALL RIGHTS RESERVED.</div>
+    </footer>
+
+    <script>
+        function check() {
+            let frm = document.frm;
+            let userid = frm.userid;
+            let userpw = frm.userpw;
+
+            if(userid.value == ""){
+                alert("아이디를 입력하세요")
+                userid.focus();
+                return;
+            }else if(userpw.value == ""){
+                alert("비밀번호를 입력하세요")
+                userpw.focus();
+                return;
+            }else{
+                alert("로그인 되었습니다.")
+            }
+        }
+    </script>
+</body>
+
+</html>

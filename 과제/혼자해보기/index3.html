@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            height: 100px;
+            background-color: rgb(245, 248, 248);
+
+            position: relative;
+        }
+        .title{
+            position: absolute;
+            left: 10px;
+            top: 20px;
+        }
+        .search{
+            height: 50px;
+            width: 200px;
+            /* border: 1px solid black; */
+
+            position: absolute;
+            bottom: 20px;
+            right: 10px;
+
+            display: flex;
+        }
+        .search input{
+            height: 50px;
+            width: 150px;
+            border: none;
+            outline: none;
+        }
+        .search img{
+            width: 50px;
+            height: 53px;
+        }
+        nav{
+            height: 40px;
+            padding: 20px;
+            background-color: rgb(232, 243, 243);
+        }
+        nav ul{
+            list-style: none;
+            display: flex;
+            margin-top: 0;
+        }
+        nav ul li{
+            padding: 10px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: black;
+        }
+        section{
+            height: 600px;
+        }
+        section ul{
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            /* border: 1px solid black; */
+        }
+        section ul li{
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            border: 0.5px solid rgb(255, 241, 241);
+
+            position: relative;
+        }
+        section ul li img{
+            width: 200px;
+            height: 220px;
+        }
+        .box{
+            width: 130px;
+            padding: 10px;
+            color: red;
+            background-color: black;
+            font-size: 25px;
+            position: absolute;
+            top: -10px;
+        }
+        section ul li p{
+            font-size: 15px;
+        }
+        footer{
+            height: 60px;
+            background-color: rgb(233, 239, 239);
+            display: flex;
+        }
+        footer div{
+            width: 33%;
+            height: 60px;
+            line-height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="title"><img src="/자바스크립트/images/images/logo.png"></div>
+        <div class="search">
+            <input type="text">
+            <img src="/자바스크립트/images/images/검색.png">
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="login2.html">로그인</a></li>
+            <li><a href="joinus.html">회원가입</a></li>
+            <li><a href="index.html">홈으로</a></li>
+        </ul>
+    </nav>
+    <section>
+        <ul>
+            <li>
+                <img src="/자바스크립트/images/images/img01.png">
+                <div class="box">Bigdata</div>
+                <p>프로젝트기반 빅데이터분석 과정</p>
+            </li>
+            <li>
+                <img src="/자바스크립트/images/images/img02.png">
+                <div class="box">Android</div>
+                <p>자바(JAVA) & 안드로이드 개발자 양성과정</p>
+            </li>
+            <li>
+                <img src="/자바스크립트/images/images/img03.png">
+                <div class="box">Front</div>
+                <p>Web기반 프론트엔드 자바개발자 양성과정</p>
+            </li>
+        </ul>
+    </section>
+    <footer>
+        <div><img src="/자바스크립트/images/images/footer_acorn.png"></div>
+        <div>(주)에이콘이즈 에이콘아카데미(홍대)</div>
+        <div>COPYRIGHT(C) HBLAB ALL RIGHTS RESERVED</div>
+    </footer>
+</body>
+</html>
