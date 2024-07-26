@@ -1,12 +1,14 @@
 .wrap {
-    width: 1280px;
+    max-width: 1280px;
     height: 5000px;
     margin: 0 auto;
+    margin-top: 170px;
+    padding: 0 40px;
     /* border: 1px solid black; */
 }
 
 .box1 {
-    height: 470.59px;
+    height: 480.59px;
     /* border: 1px solid black; */
     margin: 0, 0, 16px;
     padding: 0 , 40px;
@@ -54,31 +56,41 @@
     background-color: rgba(200, 201, 194, 0.253);
     cursor: pointer;
     position: relative;
+    border-radius: 5px;
 }
 .box1_rate{
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 26px;
     border: 1px solid black;
-    border-radius: 10px;
+    border-radius: 6px;
     background-color: black;
     color: white;
     text-align: center;
-    /* align-items: center; */
-
+    line-height: 26px;
+    font-size: 13px;
+    
     position: absolute;
-    top: 5px;
-    left: 5px;
+    top: 8px;
+    left: 8px;
 }
 .box1_trade{
-    font-size: 13px;
+    font-size: 12px;
+    color: rgb(116, 111, 111);
     position: absolute;
-    top: 10px;
+    top: 10px; 
     right: 5px;
 }
+.box1_save button{
+    border: none;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
 .box1_save{
-    font-size: 30px;
+    /* font-size: 30px; */
     position: absolute;
-    right: 8px;
+    right: 5px;
     bottom: 5px;
 }
 .box1_prod .b ul{
@@ -88,6 +100,7 @@
     margin: 0;
     padding: 0;
     font-size: 13px;
+    margin-top: 10px;
 }
 .box1_prod .b ul li{
     width: 233.59px;
@@ -98,7 +111,8 @@
     color: rgb(34, 34, 34, .5);
 }
 .b-text{
-    margin-top: -10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 .big_more{
     /* border: 1px solid black; */
@@ -108,7 +122,8 @@
 .big_more button{
     width: 97.89px;
     height: 42px;
-    border: 0.5px solid gray;
+    border: 1px dashed saddlebrown;
+    color: rgb(34, 34, 34, .5);
     padding: 0, 30px;
     border-radius: 10px;
     background-color: white;
@@ -174,29 +189,39 @@ hr{
 }
 
 .box2_rate {
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 26px;
     border: 1px solid black;
-    border-radius: 10px;
+    border-radius: 6px;
     background-color: black;
     color: white;
     text-align: center;
-    /* align-items: center; */
-
+    line-height: 26px;
+    font-size: 13px;
+    
     position: absolute;
-    top: 5px;
-    left: 5px;
+    top: 8px;
+    left: 8px;
 }
 
 .box2_trade {
-    font-size: 13px;
+    font-size: 12px;
+    color: rgb(116, 111, 111);
     position: absolute;
     top: 10px;
     right: 5px;
 }
 
+.box2_save button{
+    border: none;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
 .box2_save {
-    font-size: 30px;
+    font-size: 20px;
     position: absolute;
     right: 8px;
     bottom: 5px;
@@ -209,6 +234,7 @@ hr{
     margin: 0;
     padding: 0;
     font-size: 13px;
+    margin-top: 10px;
 }
 
 .box2_prod .d ul li {
@@ -222,7 +248,8 @@ hr{
 }
 
 .d-text {
-    margin-top: -10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 .big_more {
@@ -304,29 +331,37 @@ b{
 }
 
 .box3_rate {
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 26px;
     border: 1px solid black;
-    border-radius: 10px;
+    border-radius: 6px;
     background-color: black;
     color: white;
     text-align: center;
-    /* align-items: center; */
-
+    line-height: 26px;
+    font-size: 13px;
+    
     position: absolute;
-    top: 5px;
-    left: 5px;
+    top: 8px;
+    left: 8px;
 }
 
 .box3_trade {
-    font-size: 13px;
+    font-size: 12px;
+    color: rgb(116, 111, 111);
     position: absolute;
     top: 10px;
     right: 5px;
 }
-
+.box3_save button{
+    border: none;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
 .box3_save {
-    font-size: 30px;
+    font-size: 20px;
     position: absolute;
     right: 8px;
     bottom: 5px;
@@ -339,6 +374,7 @@ b{
     margin: 0;
     padding: 0;
     font-size: 13px;
+    margin-top: 10px;
 }
 
 .box3_prod .f ul li {
@@ -352,7 +388,8 @@ b{
 }
 
 .f-text {
-    margin-top: -10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 .big_more {

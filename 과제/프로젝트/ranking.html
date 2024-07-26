@@ -5,12 +5,146 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="랭킹style.css">
+    <link rel="stylesheet" href="./rankingstyle.css">
+    <link rel="stylesheet" href="header.css">
     <script src="https://kit.fontawesome.com/4ec79785b5.js" crossorigin="anonymous"></script>
-    
+    <style>
+        .scrollUp {
+            width: 50px;
+            height: 50px;
+            /* border: 1px solid black; */
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+        }
+
+        .scrollUp button {
+            height: 48px;
+            width: 44px;
+            background-color: #fff;
+            border: none;
+            border-radius: 30px;
+            box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        .notice {
+            width: 420px;
+            height: 500px;
+            border: 1px solid black;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .notice-header{
+            width: 420px;
+            border: 1px solid black;
+            padding: 28px 56px 16px;
+            display: flex;
+            
+        }
+        .notice-close {
+            width: 24px;
+            height: 24px;
+        }
+
+        .notice-close button {
+            width: 16px;
+            height: 16px;
+        }
+    </style>
+
+    <script>
+        window.addEventListener("load", function () {
+            let btn = document.getElementById("up-btn")
+            btn.addEventListener("click", function () {
+                window.scrollTo({ top: 0, behavior: 'smooth' })
+            })
+        })
+    </script>
+
 </head>
 
 <body>
+    <header class="header-wrap">
+        <div class="header-top">
+            <div class="top-inner">
+                <ul class="top-list">
+                    <li><a href="">고객센터</a></li>
+                    <li><a href="">마이페이지</a></li>
+                    <li><a href="">관심</a></li>
+                    <li><a href="" onclick="showNotice()">알림</a></li>
+                    <li><a href="login.html">로그인</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="main-inner">
+                <h1 class="logo">
+                    <a href="">
+                        <img src="./images/크림.png" class="logo-img" alt="logo" />
+                    </a>
+                </h1>
+                <div class="right">
+                    <div class="gnb-area">
+                        <nav class="gnb-wrap">
+                            <ul class="gnb-list">
+                                <li><a href="header.html">HOME</a></li>
+                                <li><a href="kreamstyle.html">STYLE</a></li>
+                                <li><a href="">SHOP</a></li>
+                            </ul>
+                        </nav>
+                        <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <nav class="tabs">
+                <ul class="tabs-list">
+                    <li class="tab david">
+                        <a href="">
+                            <span>다비드아발론</span>
+                        </a>
+                    </li>
+                    <li class="tab">
+                        <a href="">
+                            <span>추천</span>
+                        </a>
+                    </li>
+                    <li class="tab active">
+                        <a href="">
+                            <span>랭킹</span>
+                        </a>
+                    </li>
+                    <li class="tab">
+                        <a href="">
+                            <span>럭셔리</span>
+                        </a>
+                    </li>
+                    <li class="tab">
+                        <a href="">
+                            <span>남성</span>
+                        </a>
+                    </li>
+                    <li class="tab">
+                        <a href="">
+                            <span>여성</span>
+                        </a>
+                    </li>
+                    <li class="tab">
+                        <a href="">
+                            <span>발견</span>
+                        </a>
+                    </li>
+                    <li class="tab">
+                        <a href="">
+                            <span>이벤트</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     <div class="wrap">
         <div class="box1">
             <div class="box1_title">
@@ -31,61 +165,71 @@
                             <img src="./images/신발1.webp" width="233.59" height="233.59">
                             <div class="box1_rate">1</div>
                             <div class="box1_trade">거래 26</div>
-                            <div class="box1_save"><i class="fa-regular fa-bookmark"></i></div>
+                            <div class="box1_save"><button onclick="save()"><i
+                                        class="fa-regular fa-bookmark"></button></i></div>
                         </li>
                         <li>
                             <img src="./images/신발2.webp" width="233.59" height="233.59">
                             <div class="box1_rate">2</div>
                             <div class="box1_trade">거래 1,445</div>
-                            <div class="box1_save"><i class="fa-regular fa-bookmark"></i></div>
+                            <div class="box1_save"><button onclick="save()"><i
+                                        class="fa-regular fa-bookmark"></button></i></div>
                         </li>
                         <li>
                             <img src="./images/신발3.webp" width="233.59" height="233.59">
                             <div class="box1_rate">3</div>
                             <div class="box1_trade">거래 219</div>
-                            <div class="box1_save"><i class="fa-regular fa-bookmark"></i></div>
+                            <div class="box1_save"><button onclick="save()"><i
+                                        class="fa-regular fa-bookmark"></button></i></div>
                         </li>
                         <li>
                             <img src="./images/신발4.webp" width="233.59" height="233.59">
                             <div class="box1_rate">4</div>
                             <div class="box1_trade">거래 3,822</div>
-                            <div class="box1_save"><i class="fa-regular fa-bookmark"></i></div>
+                            <div class="box1_save"><button onclick="save()"><i
+                                        class="fa-regular fa-bookmark"></button></i></div>
                         </li>
                         <li>
                             <img src="./images/신발5.webp" width="233.59" height="233.59">
                             <div class="box1_rate">5</div>
                             <div class="box1_trade">거래 55</div>
-                            <div class="box1_save"><i class="fa-regular fa-bookmark"></i></div>
+                            <div class="box1_save"><button onclick="save()"><i
+                                        class="fa-regular fa-bookmark"></button></i></div>
                         </li>
                     </ul>
                 </div>
                 <div class="b">
                     <ul>
-                        <li> 
-                            <p> <b>Nike</b></p> <p class="b-text"> Nike Free Metcon 5 White Bright Crimson </p>
+                        <li>
+                            <p> <b>Nike</b></p>
+                            <p class="b-text"> Nike Free Metcon 5 White Bright Crimson </p>
                             <div><b>92,000원</b> <br><span>즉시 구매가</span></div>
                         </li>
-                        <li> 
-                            <p> <b>UGG</b></p> <p class="b-text"> UGG Tasman Black </p>
+                        <li>
+                            <p> <b>UGG</b></p>
+                            <p class="b-text"> UGG Tasman Black </p>
                             <div><b>169.000원</b> <br><span>즉시 구매가</span></div>
                         </li>
-                        <li> 
-                            <p> <b>Balenciaga</b></p> <p class="b-text"> Balenciaga Runner Sneakers White </p>
+                        <li>
+                            <p> <b>Balenciaga</b></p>
+                            <p class="b-text"> Balenciaga Runner Sneakers White </p>
                             <div><b>629,000원</b> <br><span>즉시 구매가</span></div>
                         </li>
-                        <li> 
-                            <p> <b>Vans</b></p> <p class="b-text">Vans Half Cab 33 DX Anaheim Factory OG Smoke Black </p>
+                        <li>
+                            <p> <b>Vans</b></p>
+                            <p class="b-text">Vans Half Cab 33 DX Anaheim Factory OG Smoke Black </p>
                             <div><b>59,000원</b> <br><span>즉시 구매가</span></div>
                         </li>
-                        <li> 
-                            <p> <b>Asics</b></p> <p class="b-text"> Asics Gel-1090 Blue Grey </p>
+                        <li>
+                            <p> <b>Asics</b></p>
+                            <p class="b-text"> Asics Gel-1090 Blue Grey </p>
                             <div><b>109,000원</b> <br><span>즉시 구매가</span></div>
                         </li>
                     </ul>
                 </div>
-                <div class="big_more"> <button  onclick="showMore()" class="btn">더보기</button></div>
+                <div class="big_more"> <button onclick="showMore()" class="btn">더보기</button></div>
             </div>
-            
+
             <div class="box1_prod">
                 <div class="a">
                     <ul>
@@ -93,54 +237,64 @@
                             <img src="./images/신발1.webp" width="233.59" height="233.59">
                             <div class="box1_rate">1</div>
                             <div class="box1_trade">거래 26</div>
-                            <div class="box1_save"><i class="fa-regular fa-bookmark"></i></div>
+                            <div class="box1_save"><button onclick="save()"><i
+                                        class="fa-regular fa-bookmark"></button></i></div>
                         </li>
                         <li>
                             <img src="./images/신발2.webp" width="233.59" height="233.59">
                             <div class="box1_rate">2</div>
                             <div class="box1_trade">거래 1,445</div>
-                            <div class="box1_save"><i class="fa-regular fa-bookmark"></i></div>
+                            <div class="box1_save"><button onclick="save()"><i
+                                        class="fa-regular fa-bookmark"></button></i></div>
                         </li>
                         <li>
                             <img src="./images/신발3.webp" width="233.59" height="233.59">
                             <div class="box1_rate">3</div>
                             <div class="box1_trade">거래 219</div>
-                            <div class="box1_save"><i class="fa-regular fa-bookmark"></i></div>
+                            <div class="box1_save"><button onclick="save()"><i
+                                        class="fa-regular fa-bookmark"></button></i></div>
                         </li>
                         <li>
                             <img src="./images/신발4.webp" width="233.59" height="233.59">
                             <div class="box1_rate">4</div>
                             <div class="box1_trade">거래 3,822</div>
-                            <div class="box1_save"><i class="fa-regular fa-bookmark"></i></div>
+                            <div class="box1_save"><button onclick="save()"><i
+                                        class="fa-regular fa-bookmark"></button></i></div>
                         </li>
                         <li>
                             <img src="./images/신발5.webp" width="233.59" height="233.59">
                             <div class="box1_rate">5</div>
                             <div class="box1_trade">거래 55</div>
-                            <div class="box1_save"><i class="fa-regular fa-bookmark"></i></div>
+                            <div class="box1_save"><button onclick="save()"><i
+                                        class="fa-regular fa-bookmark"></button></i></div>
                         </li>
                     </ul>
                 </div>
                 <div class="b">
                     <ul>
-                        <li> 
-                            <p> <b>Nike</b></p> <p class="b-text"> Nike Free Metcon 5 White Bright Crimson </p>
+                        <li>
+                            <p> <b>Nike</b></p>
+                            <p class="b-text"> Nike Free Metcon 5 White Bright Crimson </p>
                             <div><b>92,000원</b> <br><span>즉시 구매가</span></div>
                         </li>
-                        <li> 
-                            <p> <b>UGG</b></p> <p class="b-text"> UGG Tasman Black </p>
+                        <li>
+                            <p> <b>UGG</b></p>
+                            <p class="b-text"> UGG Tasman Black </p>
                             <div><b>169.000원</b> <br><span>즉시 구매가</span></div>
                         </li>
-                        <li> 
-                            <p> <b>Balenciaga</b></p> <p class="b-text"> Balenciaga Runner Sneakers White </p>
+                        <li>
+                            <p> <b>Balenciaga</b></p>
+                            <p class="b-text"> Balenciaga Runner Sneakers White </p>
                             <div><b>629,000원</b> <br><span>즉시 구매가</span></div>
                         </li>
-                        <li> 
-                            <p> <b>Vans</b></p> <p class="b-text">Vans Half Cab 33 DX Anaheim Factory OG Smoke Black </p>
+                        <li>
+                            <p> <b>Vans</b></p>
+                            <p class="b-text">Vans Half Cab 33 DX Anaheim Factory OG Smoke Black </p>
                             <div><b>59,000원</b> <br><span>즉시 구매가</span></div>
                         </li>
-                        <li> 
-                            <p> <b>Asics</b></p> <p class="b-text"> Asics Gel-1090 Blue Grey </p>
+                        <li>
+                            <p> <b>Asics</b></p>
+                            <p class="b-text"> Asics Gel-1090 Blue Grey </p>
                             <div><b>109,000원</b> <br><span>즉시 구매가</span></div>
                         </li>
                     </ul>
@@ -165,35 +319,39 @@
                 <div class="c">
                     <ul>
                         <li>
-                            <img src="./images/의류1.webp" width="233.59"
-                                height="233.59">
+                            <img src="./images/의류1.webp" width="233.59" height="233.59">
                             <div class="box2_rate">1</div>
                             <div class="box2_trade">거래 127</div>
-                            <div class="box2_save"><i class="fa-regular fa-bookmark"></i></div>
+                            <div class="box2_save"><button onclick="save()"><i
+                                        class="fa-regular fa-bookmark"></button></i></div>
                         </li>
                         <li>
                             <img src="./images/의류2.webp" width="233.59" height="233.59">
                             <div class="box2_rate">2</div>
                             <div class="box2_trade">거래 214</div>
-                            <div class="box2_save"><i class="fa-regular fa-bookmark"></i></div>
+                            <div class="box2_save"><button onclick="save()"><i
+                                        class="fa-regular fa-bookmark"></button></i></div>
                         </li>
                         <li>
                             <img src="./images/의류3.webp" width="233.59" height="233.59">
                             <div class="box2_rate">3</div>
                             <div class="box2_trade">거래 98</div>
-                            <div class="box2_save"><i class="fa-regular fa-bookmark"></i></div>
+                            <div class="box2_save"><button onclick="save()"><i
+                                        class="fa-regular fa-bookmark"></button></i></div>
                         </li>
                         <li>
                             <img src="./images/의류4.webp" width="233.59" height="233.59">
                             <div class="box2_rate">4</div>
                             <div class="box2_trade">거래 71</div>
-                            <div class="box2_save"><i class="fa-regular fa-bookmark"></i></div>
+                            <div class="box2_save"><button onclick="save()"><i
+                                        class="fa-regular fa-bookmark"></button></i></div>
                         </li>
                         <li>
                             <img src="./images/의류5.webp" width="233.59" height="233.59">
                             <div class="box2_rate">5</div>
                             <div class="box2_trade">거래 51</div>
-                            <div class="box2_save"><i class="fa-regular fa-bookmark"></i></div>
+                            <div class="box2_save"><button onclick="save()"><i
+                                        class="fa-regular fa-bookmark"></button></i></div>
                         </li>
                     </ul>
                 </div>
@@ -246,35 +404,39 @@
                 <div class="e">
                     <ul>
                         <li>
-                            <img src="./images/부츠1.webp" width="233.59"
-                                height="233.59">
+                            <img src="./images/부츠1.webp" width="233.59" height="233.59">
                             <div class="box3_rate">1</div>
                             <div class="box3_trade">거래 26</div>
-                            <div class="box3_save"><i class="fa-regular fa-bookmark"></i></div>
+                            <div class="box3_save"><button onclick="save()"><i
+                                        class="fa-regular fa-bookmark"></button></i></div>
                         </li>
                         <li>
                             <img src="./images/부츠2.webp" width="233.59" height="233.59">
                             <div class="box3_rate">2</div>
                             <div class="box3_trade">거래 1,445</div>
-                            <div class="box3_save"><i class="fa-regular fa-bookmark"></i></div>
+                            <div class="box3_save"><button onclick="save()"><i
+                                        class="fa-regular fa-bookmark"></button></i></div>
                         </li>
                         <li>
                             <img src="./images/부츠3.webp" width="233.59" height="233.59">
                             <div class="box3_rate">3</div>
                             <div class="box3_trade">거래 219</div>
-                            <div class="box3_save"><i class="fa-regular fa-bookmark"></i></div>
+                            <div class="box3_save"><button onclick="save()"><i
+                                        class="fa-regular fa-bookmark"></button></i></div>
                         </li>
                         <li>
                             <img src="./images/부츠4.webp" width="233.59" height="233.59">
                             <div class="box3_rate">4</div>
                             <div class="box3_trade">거래 3,822</div>
-                            <div class="box3_save"><i class="fa-regular fa-bookmark"></i></div>
+                            <div class="box3_save"><button onclick="save()"><i
+                                        class="fa-regular fa-bookmark"></button></i></div>
                         </li>
                         <li>
                             <img src="./images/부츠5.webp" width="233.59" height="233.59">
                             <div class="box3_rate">5</div>
                             <div class="box3_trade">거래 55</div>
-                            <div class="box3_save"><i class="fa-regular fa-bookmark"></i></div>
+                            <div class="box3_save"><button onclick="save()"><i
+                                        class="fa-regular fa-bookmark"></button></i></div>
                         </li>
                     </ul>
                 </div>
@@ -311,15 +473,26 @@
             </div>
             <hr>
         </div>
-     </div>
+    </div>
+    <div class="scrollUp"><button id="up-btn"><i class="fa-solid fa-arrow-up"></i></button></div>
 
-     <script>
-        function showMore(){
+    <div class="notice">
+        <div class="notice-header">
+            <div class="notice-close"><button><i class="fa-solid fa-x"></i></button></div>
+            <div class="notice-word"><h2>알림</h2></div>
+        </div>
+    </div>
+    <script>
+        function showMore() {
             let box = document.querySelector(".box1");
             let btn = document.querySelector(".btn")
             box.style.height = "960px";
             box.style.transition = "1s";
             btn.style.display = "none";
+        }
+
+        function save() {
+            window.location.href = "login.html"
         }
     </script>
 </body>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/4ec79785b5.js" crossorigin="anonymous"></script>
+    <style>
+        .notice {
+            width: 420px;
+            height: 1000px;
+            border: 1px solid black;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .notice-header{
+            
+            /* border: 1px solid black; */
+            padding: 19px 56px 16px 24px;
+            display: flex;
+            align-items: center;
+            
+        }
+        .notice-close {
+            width: 24px;
+            height: 24px;
+            /* border: 1px solid black; */
+            margin-right: 5px;
+            margin-top: 5px;
+        }
+
+        .notice-close button {
+            font-size: 18px;
+            border: none;
+            background-color: white;
+        }
+        .notice-word{
+            /* border: 1px solid black; */
+            height: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: -3px;
+        }
+        .notice-main nav{
+            /* border: 1px solid black; */
+            height: 44px;
+            box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+        }
+        .notice-main nav ul{
+            list-style: none;
+            display: flex;
+            line-height: 44px;
+            margin: 0 24px;
+            padding: 0;
+            
+        }
+        .notice-main nav ul li{
+            padding-right: 25px;
+            font-size: 15px;
+        }
+        .notice-main nav ul li a{
+            text-decoration: none;
+            color: black;
+        }
+        .category{
+            height: 78px;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 16px 24px;
+            gap: 12px 6px;
+        }
+        .category div{
+            height: 33px;
+        }
+        .category div button{
+            height: 33px;
+            padding: 7px 16px;
+            /* margin-right: 10px; */
+            border: 1px solid #f0f0f0;;
+            background-color: white;
+            font-size: 12px;
+            border-radius: 30px;
+        }
+        /* .notice-list{
+
+        } */
+    </style>
+</head>
+<body>
+    <div class="notice">
+        <div class="notice-header">
+            <div class="notice-close"><button><i class="fa-solid fa-x"></i></button></div>
+            <div class="notice-word">알림</div>
+        </div>
+        <div class="notice-main">
+            <nav>
+                <ul>
+                    <li><a href="">쇼핑</a></li>
+                    <li><a href="">스타일</a></li>
+                </ul>
+            </nav>
+            <div class="category">
+                <div><button>전체</button></div>
+                <div><button>거래</button></div>
+                <div><button>입찰</button></div>
+                <div><button>보관판매</button></div>
+                <div><button>관심/발매</button></div>
+                <div><button>혜택</button></div>
+                <div><button>기타</button></div>
+            </div>
+        </div>
+        <div class="notice-list">
+            <p>알림 설정 및 삭제는 앱에서 가능합니다.</p>
+        </div>
+    </div>
+</body>
+</html>
